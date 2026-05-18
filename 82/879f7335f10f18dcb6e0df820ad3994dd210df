@@ -1,0 +1,19 @@
+src/index.ts
+  s_8d2f5bfcece8b3::t_b041b3ebaec10e 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "82879f7335f10f18dcb6e0df820ad3994dd210df",
+  "prompts": {},
+  "sessions": {
+    "s_8d2f5bfcece8b3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "250911a7-c61c-43af-84e2-9d5d2a97dc37",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Angel S. Moreno <angelxmoreno@gmail.com>"
+    }
+  }
+}
