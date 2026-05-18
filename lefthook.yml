@@ -1,5 +1,4 @@
 pre-commit:
-  parallel: true
   commands:
     lint:
       glob: "**/*.{ts,tsx,js,jsx,json}"
@@ -14,8 +13,7 @@ pre-commit:
         - merge
         - rebase
     tests:
-      glob: "**/*.test.ts"
-      run: bun test {staged_files}
+      run: bun test
       skip:
         - merge
         - rebase
