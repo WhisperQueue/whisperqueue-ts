@@ -37,7 +37,7 @@ All errors extend a base `WhisperQueueError`. Typed subclasses:
 
 ## Project Structure
 
-```
+```plaintext
 src/
 ├── index.ts        # public exports only
 ├── client.ts       # WhisperQueue class — all methods

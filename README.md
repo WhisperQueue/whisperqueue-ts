@@ -24,7 +24,7 @@ bun add whisperqueue
 import { WhisperQueue } from 'whisperqueue';
 
 const client = new WhisperQueue({
-  baseUrl: 'http://omen.local:3000',
+  baseUrl: 'http://localhost:3000',
   apiKey: 'your-api-key',
 });
 
@@ -42,10 +42,13 @@ const job = await client.transcribe('s3://my-bucket/audio/interview.mp3');
 // { jobId: 'job_abc123', status: 'queued', position: 1 }
 ```
 
-Add `force: true` to bypass the cache:
+Options — bypass the cache or hint the source language:
 
 ```ts
-const job = await client.transcribe('s3://my-bucket/audio/interview.mp3', { force: true });
+const job = await client.transcribe('s3://my-bucket/audio/interview.mp3', {
+  force: true,      // bypass cache, re-transcribe even if already cached
+  language: 'es',   // optional language hint, defaults to auto-detect
+});
 ```
 
 ### Poll for status
@@ -96,6 +99,9 @@ try {
   }
   if (e instanceof WhisperQueueNotFoundError) {
     // 404 — job or transcript not found
+  }
+  if (e instanceof WhisperQueueNotReadyError) {
+    // 425 — transcript not ready yet, job still processing
   }
   if (e instanceof WhisperQueueServerError) {
     // 500 — server error
