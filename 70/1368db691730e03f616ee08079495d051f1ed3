@@ -1,0 +1,21 @@
+lefthook.yml
+  s_8d2f5bfcece8b3::t_c30ce5050edbb4 16
+package.json
+  s_8d2f5bfcece8b3::t_84bbbaa38e237f 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "701368db691730e03f616ee08079495d051f1ed3",
+  "prompts": {},
+  "sessions": {
+    "s_8d2f5bfcece8b3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "250911a7-c61c-43af-84e2-9d5d2a97dc37",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Angel S. Moreno <angelxmoreno@gmail.com>"
+    }
+  }
+}
